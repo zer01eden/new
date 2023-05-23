@@ -1,4 +1,4 @@
-// spread operator
+// SPREAD operator
 
 const arr1 = [1, 2, 3, 4, 5];
 const arr2 = [1, 2];
@@ -92,4 +92,19 @@ let arrow4 = () => "booom";
 
 console.log(arrow4());
 
-//
+// REST parameter
+// działa podobnie jak SPREAD, ale uzywamy go jako paramatr funkcji
+
+function myFun(...param) {
+	console.log(param);
+}
+
+myFun(12, 13, 1, "e", { a: 1 }, 66);
+
+function myFun2(...param) {
+	let newArr = [...param];
+	newArr.push(99);
+	console.log(param, newArr);
+}
+
+myFun2(1, 2, 3, "trrrt");
